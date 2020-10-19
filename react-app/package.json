@@ -99,7 +99,7 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
+    "testEnvironment": "jest-environment-jsdom-sixteen",
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
@@ -135,5 +135,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
