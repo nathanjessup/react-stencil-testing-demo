@@ -1,12 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
-import MyComponent from 'stencil-app/dist/custom-elements';
+import { defineCustomElements } from 'stencil-app/dist/custom-elements';
 
-customElements.define('my-component', MyComponent);
+defineCustomElements();
 
-test('renders web-component', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/Hello, World!/i);
-  expect(linkElement).toBeInTheDocument();
+describe('app', () => {
+  it('should render web component',async () => {
+
+    render(<App />);
+    expect(await screen.findByText(/Hello/i)).toBeInTheDocument();
+  })
 });

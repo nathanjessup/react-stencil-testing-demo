@@ -106,7 +106,7 @@
       "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "<rootDir>/node_modules/(?!stencil-app)",
       "^.+\\.module\\.(css|sass|scss)$"
     ],
     "modulePaths": [],
@@ -131,12 +131,11 @@
       "jest-watch-typeahead/testname"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/runtime": "^7.12.1",
+    "@stencil/core": "^2.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
